@@ -1,5 +1,5 @@
 import React from 'react'
-import WeatherCardSection from './WeatherCardSection'
+import WeatherCardSection from './WeatherCardSection/WeatherCardSection'
 import axios from 'axios';
 import { useState } from 'react'
 const WeatherSection = () => {
@@ -34,10 +34,10 @@ const getWeatherdata=async(searchvalue)=>{
   return (
     <div>
     <div style={{padding:'2rem'}}>
-        <input style={{padding:'0.4rem'}} onChange={handleChange}/>
-        <button style={{backgroundColor:'#43a047',padding:'0.5rem',border:'none',color:'white'}} onClick={handleSearch}>Search</button>
+        <input style={{padding:'0.8rem',fontSize:"1.3rem"}} onChange={handleChange} type="text"/>
+        <button style={{backgroundColor:'#43a047',padding:'1rem',border:'none',color:'white',fontSize:'1.3rem'}} onClick={handleSearch}>Search</button>
     </div>
-    { isloading ? (<div>Loading data...</div>) : (
+    { isloading ? (<p>Loading data...</p>) : (
     cond ? (<div style={{display:'flex',flexDirection:'row',gap:'2rem',justifyContent:'center'}}>
       <WeatherCardSection xdata={wdata.current?.temp_c} xdata1={"Temperature"}/>
       <WeatherCardSection xdata={wdata.current?.pressure_in} xdata1={"Pressure"}/>

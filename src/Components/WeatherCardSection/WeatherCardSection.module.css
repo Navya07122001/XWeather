@@ -1,0 +1,11 @@
+.weather-cards{
+    height: 120px;
+    width: 240px;
+    background-color: white;
+    box-shadow: 3px 2px 17px black;
+}
+.weather-card{
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1rem;
+}
